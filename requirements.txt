@@ -1,6 +1,6 @@
-cirq==1.1.0
-cirq_core==1.1.0
-jax==0.4.13
-jaxlib==0.4.13
+cirq==1.2.0
+cirq_core==1.2.0
+jax==0.4.18
+jaxlib==0.4.18
 qiskit==0.45.0
 tensornetwork==0.4.6

@@ -27,7 +27,7 @@ We recommend the users to use [Conda](https://docs.conda.io/en/latest/) to confi
     ```
 3. Use Conda to create a new Conda environment:
     ```bash
-    conda create -n QDP python=3.8.12
+    conda create -n QDP python=3.9.0
     ```
 4. Activate the above environment and use pip to install required libraries in `requirements.txt`.
     ```bash
