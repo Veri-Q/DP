@@ -8,7 +8,7 @@
 
     2. Create a virtual environment `qml` and activate it
         ```bash
-        virtualenv qml && source ./qml/bin/ activate
+        virtualenv qml && source ./qml/bin/activate
         ```
 
     3. Install required libraries in the virtual environment `qml`.
