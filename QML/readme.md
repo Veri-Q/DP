@@ -1,23 +1,38 @@
-1. EC_9, GC_9, AI_8 in Table 4
+- Please note that due to the randomness of quantum machine learning model training, the values of $\kappa^*$ may differ from Table 4.
+- EC_9, GC_9, AI_8, Mnist_10, Fashion_4 in Table 4
 
-    Install required libraries
-    ```bash
-    pip install -r requirements.txt
-    ```
+    1. Install `virtualenv` for creating virtual environments.
+        ```bash
+        pip install virtualenv
+        ```
 
-    Run scripts
-    ```bash
-    python ec_9.py
-    ```
+    2. Create a virtual environment `qml` and activate it
+        ```bash
+        virtualenv qml && source ./qml/bin/ activate
+        ```
 
-    ```bash
-    python gc_9.py
-    ```
+    3. Install required libraries in the virtual environment `qml`.
+        ```bash
+        pip install -r requirements.txt
+        ```
 
-    ```bash
-    python ai_9.py
-    ```
+        Run scripts
+        ```bash
+        python ec_9.py
+        ```
 
-2. Mnist_10, Fashion_4 in Table 4
+        ```bash
+        python gc_9.py
+        ```
 
-    Install TorchQuantum according to its [Installation Guide](https://github.com/mit-han-lab/torchquantum#installation). Then open the notebooks inside this directory.
+        ```bash
+        python ai_9.py
+        ```
+
+        ```bash
+        python mnist10.py
+        ```
+
+        ```bash
+        python fashion4.py
+        ```
