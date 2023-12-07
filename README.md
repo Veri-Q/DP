@@ -7,7 +7,7 @@ This repository contains two parts:
 [Ji Guan, Wang Fang, Mingyu Huang, and Mingsheng Ying. 2023. Detecting Violations of Differential Privacy for Quantum Algorithms. In Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS ’23), November 26–30, 2023, Copenhagen, Denmark. ACM, New York, NY, USA, 15 pages.](https://doi.org/10.1145/3576915.3623108)
 ## Requirements ##
 
-- [Python3.8](https://www.python.org/).
+- [Python3.9](https://www.python.org/).
 - Python libraries: 
     * [Cirq](https://quantumai.google/cirq) for representing (noisy) quantum circuits.
     * [Tensornetwork](https://github.com/google/tensornetwork) for manipulating tensor networks.
