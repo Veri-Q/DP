@@ -1,9 +1,10 @@
-# DP: Tool for Detecting Violations of Differential Privacy for Quantum Algorithms
+# VeriQDP: Tool for Detecting Violations of Differential Privacy for Quantum Algorithms
 
 This repository contains two parts:
 - An implementation for computing the condition number of a quantum decision model (See Algorithm 2 in the paper).
 - Experiment codes and data for evaluation (See Section 5 in the paper).
 
+[Ji Guan, Wang Fang, Mingyu Huang, and Mingsheng Ying. 2023. Detecting Violations of Differential Privacy for Quantum Algorithms. In Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS ’23), November 26–30, 2023, Copenhagen, Denmark. ACM, New York, NY, USA, 15 pages.](https://doi.org/10.1145/3576915.3623108)
 ## Requirements ##
 
 - [Python3.8](https://www.python.org/).

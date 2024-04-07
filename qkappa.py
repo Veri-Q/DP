@@ -9,7 +9,7 @@ import jax.numpy as jnp
 from jax import jit
 from cirq.contrib.qasm_import import circuit_from_qasm
 import signal
-from qiskit import transpile, QuantumCircuit
+from qiskit import QuantumCircuit
 from qiskit.transpiler.passes import RemoveBarriers
 from contextlib import contextmanager
 
@@ -222,27 +222,6 @@ def testFile(file, noise_op = cirq.depolarize, p=0.01):
     except Exception as e:
         raise
 
-# def testFile(path, file, output, p=0.01):
-#     try:
-#         with time_limit(5):
-#             qubits, model_circuit = getTestCircuit(path+file, p, noise_op=cirq.bit_flip)
-#             measurement = jnp.array([[1., 0.], [0., 0.]])
-#             tStart = time.time()
-#             e1, e2 = lipschitz(model_circuit, qubits, measurement)
-#             totalTime = time.time()-tStart
-#             with open(output, 'a') as g:
-#                 g.write('%s\t\t\t%f\t%f\t%s\t%f\t%f\t%f\n'%(path+file, totalTime, p, 'depolorize', e1, e2, e1/e2))
-#                 print(e1/e2)
-#             print('The eigenvalues are: ', e1, e2)
-#     except TimeoutException as e:
-#         with open(output, 'a') as g:
-#             g.write('%s\t\t\tTime out!\n'%path+file)
-#         print('Time out!')
-#     except Exception as e:
-#         with open(output, 'a') as g:
-#             g.write('%s\t\t\t%s\n'%(path+file, e))
-#         print(e)
-
 def testFolder(path, noise_op = cirq.depolarize, p=0.01):
     files = os.listdir(path)
     for f in files:
@@ -250,7 +229,7 @@ def testFolder(path, noise_op = cirq.depolarize, p=0.01):
         gc.collect()
 
 if __name__ == '__main__':
-    # testFile('./QAOA/qaoa_10.qasm', cirq.bit_flip, p=0.01)
+    testFile('./QAOA/qaoa_10.qasm', cirq.bit_flip, p=0.01)
     testFolder('./HFVQE/', cirq.bit_flip, p=0.01)
 
     
