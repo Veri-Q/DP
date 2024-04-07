@@ -1,5 +1,3 @@
-import tensorflow as tf
-import tensorflow_quantum as tfq
 import cirq
 import numpy as np
 from qdp import evaluate
