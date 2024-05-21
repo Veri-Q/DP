@@ -1,5 +1,5 @@
-cirq==1.2.0
-cirq_core==1.2.0
+cirq==1.3.0
+cirq_core==1.3.0
 jax==0.4.18
 jaxlib==0.4.18
 qiskit==0.45.0

@@ -172,10 +172,10 @@ def smallest_eigenvalue(nqs, mv, N):
 
 def kappa(model_circuit, qubits, measurement):
     n, mv1, mv2 = model_to_mv(model_circuit, qubits, measurement)
-    e1 = largest_eigenvalue(n, mv1, 500)
+    e1 = largest_eigenvalue(n, mv1, 100)
     if e1 == -1:
         return -1
-    e2 = smallest_eigenvalue(n, mv2, 500)
+    e2 = smallest_eigenvalue(n, mv2, 100)
     if e2 == -1:
         return -1
 
@@ -216,7 +216,7 @@ def testFile(file, noise_op = cirq.depolarize, p=0.01):
             print('Noise configuration: %s, %f'%(noise_op, p))
             print('Total execution time: %.4fs'%totalTime)
             print('Condition Number: %.6f'%k)
-            print('(The max/min eigenvalues are: %.4f, %.4f$)'%(e1, e2))
+            print('(The max/min eigenvalues are: %.4f, %.4f)'%(e1, e2))
     except TimeoutException as e:
         print('Time out!')
     except Exception as e:
