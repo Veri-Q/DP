@@ -116,7 +116,7 @@ def model_to_mv(model_circuit, qubits, measurement):
         y = tn.contractors.auto(nodes_set, left_edge).tensor.reshape([2 ** len(qubits)])
         e = jnp.linalg.norm(y)
         return y / e, e
-    
+        
     def mv2(v):
         nodes_set, left_edge, right_edge = circuit_to_tensor(model_circuit, qubits, jnp.eye(2)-measurement)
         node_v = tn.Node(v.reshape([2] * len(qubits)), axis_names=[edge.name for edge in left_edge])
@@ -217,6 +217,7 @@ def testFile(file, noise_op = cirq.depolarize, p=0.01):
             print('Total execution time: %.4fs'%totalTime)
             print('Condition Number: %.6f'%k)
             print('(The max/min eigenvalues are: %.4f, %.4f)'%(e1, e2))
+            return k, e1, e2
     except TimeoutException as e:
         print('Time out!')
     except Exception as e:
